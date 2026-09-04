@@ -44,7 +44,7 @@ def _check_function(func: ast.FunctionDef) -> list[Issue]:
         if isinstance(stmt, ast.Assign):
             for target in stmt.targets:
                 for name_node in _simple_name_targets(target):
-                    if name_node.id != "_":
+                     if not name_node.id.startswith("_"):
                         assigned[name_node.id] = stmt.lineno
         elif isinstance(stmt, ast.AugAssign):
             if isinstance(stmt.target, ast.Name):
