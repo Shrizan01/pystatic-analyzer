@@ -25,7 +25,7 @@ from analyzer.unused_vars import check_unused_variables
 from analyzer.duplicate_code import find_duplicate_code
 
 DEFAULT_COMPLEXITY_THRESHOLD = 10
-DEFAULT_DUPLICATE_MIN_LINES = 3  # per project spec Section 1.2/TC-FR4-03
+DEFAULT_DUPLICATE_MIN_LINES = 3 # per project spec Section 1.2/TC-FR4-03
 
 
 def analyze_source(
