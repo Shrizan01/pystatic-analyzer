@@ -19,7 +19,7 @@ import ast
 from analyzer.core import Issue, Severity
 
 
-def find_duplicate_code(source: str, min_lines: int = 4) -> list[Issue]:
+def find_duplicate_code(source: str, min_lines: int = 3) -> list[Issue]:
     if not isinstance(source, str):
         raise TypeError(f"source must be a str, got {type(source).__name__}")
     if min_lines < 2:
